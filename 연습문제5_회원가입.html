@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+    <fieldset>
+        <legend>필수 입력 사항</legend>
+        <table>
+            <tr>
+                <th>ID</th>
+                <td><input type="text" id="ID" placeholder="아이디 10글자 이내" maxlength="10"></td>
+                <td><button type="button" onclick="alert('중복확인')"><b>중복 확인</b></button></td>
+            </tr>
+            <tr>
+                <th>비밀번호</th>
+                <td><input type="password" name="password" placeholder="영문, 숫자, 특수문자 포함 8자 이상" maxlength="8" ></td>
+            </tr>
+            <tr>
+                <th>비밀번호 확인</th>
+                <td><input type="password" name="password_confirm" maxlength="8"></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><input type="text"></td>
+                <td><select name="em">
+                    <option value="selfish" selected>직접입력</option>
+                    <option value="www.naver.com">네이버</option>
+                    <option value="www.google.com">구글</option>
+                </select></td>
+            </tr>
+        </table>
+    </fieldset>
+    <fieldset>
+        <legend>추가 정보</legend>
+        <lable for="files">프로필 사진 : </lable>
+            <input type="file" name="files" id="files">
+        <br><br>
+        <label for="gender">성별 : </label>
+            <input type="radio" name="gender" id="gender" value="M"> 남자
+            <input type="radio" name="gender" id="gender" value="F"> 여자
+        <br><br>
+        <label for="dates">생년월일 : </label>
+            <input type="date" name="dates" id="dates">
+        <br><br>
+
+        <label for="hobby">취미</label><br>
+            <input type="checkbox" name="hobby" id="hobby"> 야구
+            <input type="checkbox" name="hobby" id="hobby"> 농구
+            <input type="checkbox" name="hobby" id="hobby"> 축구
+            <br>
+            <input type="checkbox" name="hobby" id="hobby"> 공부
+            <input type="checkbox" name="hobby" id="hobby"> 음악감상 <br>
+            <input type="checkbox" name="hobby" id="hobby"> 기타 : <input type="text" name="ex">
+            <br><br>
+
+            자기소개<br>
+            <textarea name="" id="" cols="50" rows="5" style="resize: none;"></textarea>
+    </fieldset>
+    <br>
+    <input type="submit" value="회원가입">
+    <input type="reset" value="다시입력" >
+    <input type="button" value="이전으로" onclick="alert('이전으로 간다잉')">
+</form>
+</body>
+</html>
